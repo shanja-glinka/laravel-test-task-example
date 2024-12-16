@@ -1,0 +1,160 @@
+{
+	"info": {
+		"_postman_id": "7b2f6e6c-7699-41ca-ab19-62f061f8562c",
+		"name": "LaravelTest",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "27440715"
+	},
+	"item": [
+		{
+			"name": "Api",
+			"item": [
+				{
+					"name": "User",
+					"item": [
+						{
+							"name": "List",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{localhost}}/api/users?order=desc&search=Re&sortBy=id&page=1&perPage=3",
+									"host": [
+										"{{localhost}}"
+									],
+									"path": [
+										"api",
+										"users"
+									],
+									"query": [
+										{
+											"key": "order",
+											"value": "desc"
+										},
+										{
+											"key": "search",
+											"value": "Re"
+										},
+										{
+											"key": "sortBy",
+											"value": "id"
+										},
+										{
+											"key": "page",
+											"value": "1"
+										},
+										{
+											"key": "perPage",
+											"value": "3"
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Show",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{localhost}}/api/users/1",
+									"host": [
+										"{{localhost}}"
+									],
+									"path": [
+										"api",
+										"users",
+										"1"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Update",
+							"request": {
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    // \"email\": \"padberg.ernestine@example.org\",\r\n    \"password\": \"123321\",\r\n    \"name\": \"Prof. Arnold Ebert II __UPDATED\",\r\n    \"ip\": \"wad\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{localhost}}/api/users/3",
+									"host": [
+										"{{localhost}}"
+									],
+									"path": [
+										"api",
+										"users",
+										"3"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Create",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    // \"email\": \"padberg.ernestine@example.org\",\r\n    \"email\": \"brgogf.ernestine@example.org\",\r\n    \"password\": \"123321\",\r\n    \"name\": \"Usual name\",\r\n    // \"ip\": \"313.32.32.2\",\r\n    \"ip\": \"111.222.112.221\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{localhost}}/api/users",
+									"host": [
+										"{{localhost}}"
+									],
+									"path": [
+										"api",
+										"users"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Destroy",
+							"request": {
+								"method": "DELETE",
+								"header": [],
+								"url": {
+									"raw": "{{localhost}}/api/users/52",
+									"host": [
+										"{{localhost}}"
+									],
+									"path": [
+										"api",
+										"users",
+										"52"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				}
+			]
+		}
+	],
+	"variable": [
+		{
+			"key": "localhost",
+			"value": "",
+			"type": "default"
+		}
+	]
+}
